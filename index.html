@@ -8,8 +8,14 @@
     <meta name="description"
         content="WDD 231 course home page for Werner Moecke, including personal information, social links, responsive navigation, and certificate course cards.">
     <meta name="author" content="Werner Moecke">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
@@ -52,7 +58,7 @@
 
         <section class="card certificate-card">
             <h2>Web and Computer Programming Certificate</h2>
-            <div class="course-filters" aria-label="Course filters">
+            <div class="course-filters" role="group" aria-label="Course filters">
                 <button id="all" type="button">All Courses</button>
                 <button id="wdd" type="button">WDD Courses</button>
                 <button id="cse" type="button">CSE Courses</button>
