@@ -4,12 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Course Home Page</title>
+    <title>WDD 231 Course Home Page | Werner Moecke</title>
+    <meta name="description"
+        content="WDD 231 course home page for Werner Moecke, including personal information, social links, responsive navigation, and certificate course cards.">
+    <meta name="author" content="Werner Moecke">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
-    <h1>WDD 231 - Course Home Page</h1>
-    <p>This is my course homepage.</p>
+    <header>
+        <img src="images/logo.svg" alt="Course site logo" width="48" height="48">
+        <span>Werner Moecke</span>
+        <button id="nav-button" class="hamburger" type="button" aria-label="Open navigation menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="home-grid">
+            <section class="card about-card">
+                <h2>About Me</h2>
+                <p>My name is Werner Moecke. I live in São Paulo, Brazil, and I am studying software development through
+                    BYU-Pathway. I have a long background in technology and enjoy working with software, electronics,
+                    retro gaming, and practical problem solving.</p>
+                <p>My current goal is to keep improving my frontend skills while connecting them with my experience in
+                    back-end development, especially C# and .NET.</p>
+            </section>
+
+            <section class="card photo-card">
+                <h2>Student Photo</h2>
+                <img class="profile-photo" src="images/profile.jpg" alt="Werner Moecke" width="300" height="300">
+                <p>São Paulo, Brazil</p>
+            </section>
+        </div>
+
+        <section class="card certificate-card">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="course-filters" aria-label="Course filters">
+                <button id="all" type="button">All Courses</button>
+                <button id="wdd" type="button">WDD Courses</button>
+                <button id="cse" type="button">CSE Courses</button>
+            </div>
+            <p id="credits-total" class="credits-total" aria-live="polite"></p>
+            <div id="course-cards" class="course-cards"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com/wmoecke" target="_blank" rel="noopener">
+                <img src="images/github.svg" alt="GitHub profile" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/wernermoecke/" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn profile" width="32" height="32">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                <img src="images/youtube.svg" alt="YouTube" width="32" height="32">
+            </a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Werner Moecke | Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
