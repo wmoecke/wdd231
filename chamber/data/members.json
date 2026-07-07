@@ -1,0 +1,92 @@
+{
+    "members": [
+        {
+            "name": "Paulista Tech Repair",
+            "address": "Av. Paulista, 1578 - Bela Vista, São Paulo, SP",
+            "phone": "+55 11 3050-4100",
+            "email": "contact@paulistatechrepair.example",
+            "website": "https://example.com/paulista-tech-repair",
+            "image": "paulista-tech-repair.webp",
+            "membershipLevel": 3,
+            "category": "Technology Services",
+            "description": "Notebook, smartphone, and small electronics repair for local residents and small businesses."
+        },
+        {
+            "name": "Brooklin Cowork Hub",
+            "address": "Rua Florida, 1638 - Brooklin, São Paulo, SP",
+            "phone": "+55 11 4062-8800",
+            "email": "contact@brooklincoworkhub.example",
+            "website": "https://example.com/brooklin-cowork-hub",
+            "image": "brooklin-cowork-hub.webp",
+            "membershipLevel": 2,
+            "category": "Business Services",
+            "description": "Flexible workspaces, meeting rooms, and networking events for entrepreneurs and remote teams."
+        },
+        {
+            "name": "Moema English Studio",
+            "address": "Av. Ibirapuera, 2400 - Moema, São Paulo, SP",
+            "phone": "+55 11 5091-2200",
+            "email": "contact@moemaenglishstudio.example",
+            "website": "https://example.com/moema-english-studio",
+            "image": "moema-english-studio.webp",
+            "membershipLevel": 1,
+            "category": "Education",
+            "description": "English classes for professionals, students, and companies in the south zone of São Paulo."
+        },
+        {
+            "name": "Santo Amaro Print Lab",
+            "address": "Largo Treze de Maio, 78 - Santo Amaro, São Paulo, SP",
+            "phone": "+55 11 5524-7000",
+            "email": "contact@santoamaroprintlab.example",
+            "website": "https://example.com/santo-amaro-print-lab",
+            "image": "santo-amaro-print-lab.webp",
+            "membershipLevel": 2,
+            "category": "Creative Services",
+            "description": "Printing, signage, business cards, promotional materials, and visual identity support."
+        },
+        {
+            "name": "Vila Mariana Health Center",
+            "address": "Rua Domingos de Morais, 1025 - Vila Mariana, São Paulo, SP",
+            "phone": "+55 11 5572-3100",
+            "email": "contact@vilamarianahealth.example",
+            "website": "https://example.com/vila-mariana-health-center",
+            "image": "vila-mariana-health-center.webp",
+            "membershipLevel": 3,
+            "category": "Healthcare",
+            "description": "Multispecialty clinic serving families, professionals, and companies in the region."
+        },
+        {
+            "name": "Jardins Café & Bakery",
+            "address": "Alameda Campinas, 900 - Jardins, São Paulo, SP",
+            "phone": "+55 11 3284-6700",
+            "email": "contact@jardinscafebakery.example",
+            "website": "https://example.com/jardins-cafe-bakery",
+            "image": "jardins-cafe-bakery.webp",
+            "membershipLevel": 1,
+            "category": "Food and Hospitality",
+            "description": "Local café offering breakfast, fresh bread, snacks, and catering for nearby offices."
+        },
+        {
+            "name": "Interlagos Fitness Club",
+            "address": "Av. Interlagos, 3500 - Interlagos, São Paulo, SP",
+            "phone": "+55 11 5666-4200",
+            "email": "contact@interlagosfitnessclub.example",
+            "website": "https://example.com/interlagos-fitness-club",
+            "image": "interlagos-fitness-club.webp",
+            "membershipLevel": 2,
+            "category": "Health and Wellness",
+            "description": "Fitness center with strength training, cardio, swimming classes, and corporate wellness plans."
+        },
+        {
+            "name": "Campo Belo Pet Care",
+            "address": "Rua Vieira de Morais, 640 - Campo Belo, São Paulo, SP",
+            "phone": "+55 11 5041-3300",
+            "email": "contact@campobelopetcare.example",
+            "website": "https://example.com/campo-belo-pet-care",
+            "image": "campo-belo-pet-care.webp",
+            "membershipLevel": 1,
+            "category": "Pet Services",
+            "description": "Veterinary services, grooming, pet supplies, and preventive care for cats and dogs."
+        }
+    ]
+}
