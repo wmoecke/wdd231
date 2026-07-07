@@ -1,0 +1,419 @@
+/* São Paulo South Chamber of Commerce - small view */
+
+:root {
+    --primary: #12355b;
+    --secondary: #2a9d8f;
+    --accent: #8a5a00;
+    --accent-light: #fff4d6;
+    --background: #f7fafc;
+    --surface: #ffffff;
+    --card-background: #e5e5e5;
+    --text: #17202a;
+    --muted: #5f6c7b;
+    --border: #9ca3af;
+    --shadow: 0 0.25rem 0.75rem rgb(18 53 91 / 14%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+.brand strong {
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+a {
+    color: var(--primary);
+}
+
+a:hover,
+a:focus {
+    color: var(--secondary);
+}
+
+/* Header */
+
+header {
+    display: grid;
+    grid-template-columns: auto 44px 48px;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #dddddd;
+    color: var(--text);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.brand img {
+    width: 44px;
+    height: 44px;
+}
+
+.brand span {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.15;
+}
+
+.theme-button {
+    width: 34px;
+    height: 34px;
+    border: 2px solid #222;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #111 50%, #eeeeee 50%);
+    cursor: pointer;
+}
+
+.menu-button {
+    width: 48px;
+    height: 48px;
+    border: 0;
+    background: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 2.2rem;
+}
+
+.menu-button::before {
+    content: "\2630";
+}
+
+.menu-button.open::before {
+    content: "\00d7";
+}
+
+/* Navigation */
+
+.navigation {
+    display: none;
+    background-color: #dddddd;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation a {
+    display: block;
+    min-height: 44px;
+    padding: 0.9rem 1rem;
+    color: var(--text);
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background-color: #c9c9c9;
+}
+
+.navigation .current a {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+/* Main */
+
+main {
+    width: min(74rem, calc(100% - 2rem));
+    margin-inline: auto;
+    padding-block: 1rem 2rem;
+}
+
+main h1 {
+    margin: 0.5rem 0 1rem;
+    color: var(--text);
+    font-size: clamp(2rem, 6vw, 2.8rem);
+}
+
+.directory-section {
+    margin-top: 0;
+}
+
+/* Accessibility utility */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Grid/List controls */
+
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.view-toggle button {
+    min-width: 6rem;
+    min-height: 44px;
+    border: 1px solid #555;
+    border-radius: 0.25rem;
+    background-color: #dddddd;
+    color: var(--text);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.view-toggle button.active,
+.view-toggle button:hover,
+.view-toggle button:focus {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Member cards - grid view */
+
+.members-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.member-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 0.45rem;
+    background-color: var(--card-background);
+    box-shadow: var(--shadow);
+}
+
+.member-heading {
+    padding: 0.75rem 1rem 0.55rem;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.member-heading h3 {
+    margin-bottom: 0.15rem;
+    color: var(--text);
+    font-size: 1.25rem;
+}
+
+.member-category {
+    margin-bottom: 0;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.member-body {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.85rem;
+}
+
+.member-card img {
+    width: 6rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.member-content {
+    min-width: 0;
+}
+
+.member-content p {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.member-content a {
+    overflow-wrap: anywhere;
+    font-weight: 700;
+}
+
+.member-level,
+.description,
+.address {
+    display: none;
+}
+
+/* List view */
+
+.members-list {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.members-list .member-card {
+    border-radius: 0.35rem;
+    background-color: var(--surface);
+}
+
+.members-list .member-heading {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+}
+
+.members-list .member-heading h3 {
+    font-size: 1.05rem;
+}
+
+.members-list .member-category {
+    display: none;
+}
+
+.members-list .member-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.75rem;
+}
+
+.members-list .member-card img {
+    display: none;
+}
+
+.members-list .member-content {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.members-list .member-content p {
+    margin-bottom: 0;
+}
+
+.error-message {
+    padding: 1rem;
+    border-left: 6px solid #b42318;
+    background-color: #fee4e2;
+}
+
+/* Footer */
+
+footer {
+    display: grid;
+    gap: 1.25rem;
+    padding: 1.25rem 1rem;
+    background-color: #dddddd;
+    color: var(--text);
+    text-align: left;
+}
+
+footer h2 {
+    margin-bottom: 0.35rem;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+footer p {
+    margin-bottom: 0.2rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social a {
+    display: grid;
+    width: 56px;
+    height: 56px;
+    place-items: center;
+    border-radius: 50%;
+    background-color: #555555;
+}
+
+.social a:hover,
+.social a:focus {
+    background-color: var(--primary);
+}
+
+.social img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+body.dark {
+    --background: #17202a;
+    --surface: #1f2937;
+    --card-background: #243447;
+    --text: #f8fafc;
+    --muted: #d1d5db;
+}
+
+body.dark header,
+body.dark .navigation,
+body.dark footer {
+    background-color: #111827;
+    color: #f8fafc;
+}
+
+body.dark .brand,
+body.dark .navigation a {
+    color: #f8fafc;
+}
+
+body.dark .view-toggle button {
+    background-color: #374151;
+    color: #f8fafc;
+}
+
+body.dark .member-card {
+    background-color: #243447;
+}
+
+@media (max-width: 380px) {
+    .brand small {
+        display: none;
+    }
+
+    .member-body {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .member-card img {
+        margin-inline: auto;
+    }
+}
