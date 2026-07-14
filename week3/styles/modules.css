@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    width: min(42rem, calc(100% - 2rem));
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.25rem 0.75rem rgb(15 23 42 / 12%);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #0f172a;
+}
+
+h2 {
+    color: #334155;
+    font-size: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+}
+
+select,
+button {
+    min-height: 44px;
+    font: inherit;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.buttons {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+button {
+    border: 0;
+    border-radius: 0.35rem;
+    background-color: #1d4ed8;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.65rem 1rem;
+}
+
+button:hover,
+button:focus {
+    background-color: #1e40af;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 0.5rem;
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+    padding: 0.65rem;
+    text-align: left;
+}
+
+th {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+@media screen and (min-width: 38rem) {
+    .buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
