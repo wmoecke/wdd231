@@ -11,6 +11,10 @@
     --text: #17202a;
     --muted: #5f6c7b;
     --border: #9ca3af;
+    --white: #ffffff;
+    --black: #000000;
+    --danger: #b42318;
+    --danger-light: #fee4e2;
     --shadow: 0 0.25rem 0.75rem rgb(18 53 91 / 14%);
 }
 
@@ -187,7 +191,7 @@ section {
     max-width: 34rem;
     padding: 1rem;
     background-color: rgb(18 53 91 / 88%);
-    color: white;
+    color: var(--white);
 }
 
 .hero-text h2 {
@@ -369,7 +373,7 @@ section {
 .view-toggle button:hover,
 .view-toggle button:focus {
     background-color: var(--primary);
-    color: white;
+    color: var(--white);
 }
 
 .members-grid {
@@ -481,8 +485,8 @@ section {
 
 .error-message {
     padding: 1rem;
-    border-left: 6px solid #b42318;
-    background-color: #fee4e2;
+    border-left: 6px solid var(--danger);
+    background-color: var(--danger-light);
 }
 
 /* Footer */
