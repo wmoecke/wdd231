@@ -35,7 +35,7 @@ img {
 h1,
 h2,
 h3,
-.brand strong {
+.brand span {
     font-family: "Montserrat", Arial, sans-serif;
 }
 
@@ -81,7 +81,6 @@ header {
 }
 
 .brand span {
-    font-family: "Montserrat", Arial, sans-serif;
     font-size: 1.1rem;
     line-height: 1.15;
 }
@@ -89,9 +88,9 @@ header {
 .theme-button {
     width: 34px;
     height: 34px;
-    border: 2px solid #222;
+    border: 2px solid #222222;
     border-radius: 50%;
-    background: linear-gradient(90deg, #111 50%, #eeeeee 50%);
+    background: linear-gradient(90deg, #111111 50%, #eeeeee 50%);
     cursor: pointer;
 }
 
@@ -164,11 +163,180 @@ main h1 {
     font-size: clamp(2rem, 6vw, 2.8rem);
 }
 
+section {
+    margin-bottom: 1.25rem;
+}
+
+.home-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.4rem;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.home-hero img {
+    width: 100%;
+    min-height: 18rem;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    inset: auto auto 1rem 1rem;
+    max-width: 34rem;
+    padding: 1rem;
+    background-color: rgb(18 53 91 / 88%);
+    color: white;
+}
+
+.hero-text h2 {
+    margin-bottom: 0.35rem;
+    font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
+.hero-text p {
+    margin-bottom: 0.8rem;
+}
+
+.cta-button {
+    display: inline-block;
+    min-height: 44px;
+    border-radius: 0.35rem;
+    background-color: var(--secondary);
+    color: #071d2f;
+    font-weight: 700;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #f2c14e;
+    color: #17202a;
+}
+
+.home-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.panel,
+.spotlight-card {
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    background-color: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.panel h2 {
+    margin-bottom: 0;
+    padding: 0.65rem 1rem;
+    background-color: #dddddd;
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+.panel-content {
+    padding: 1rem;
+}
+
+.event-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.event-list li {
+    border-left: 0.3rem solid var(--secondary);
+    padding-left: 0.75rem;
+}
+
+.weather-current {
+    display: grid;
+    gap: 0.25rem;
+    justify-items: start;
+}
+
+.weather-current figure {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.weather-current img {
+    width: 56px;
+    height: 56px;
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.forecast-list {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0.75rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.weather-message {
+    color: #b42318;
+    font-weight: 700;
+}
+
+.weather-message:empty {
+    display: none;
+}
+
+.spotlight-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    overflow: hidden;
+    text-align: center;
+}
+
+.spotlight-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.spotlight-card-content {
+    padding: 1rem;
+}
+
+.spotlight-card h3 {
+    margin-bottom: 0.35rem;
+}
+
+.spotlight-card p {
+    margin-bottom: 0.35rem;
+}
+
+.membership {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    border-radius: 999px;
+    background-color: var(--accent-light);
+    color: #4b3000;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+}
+
+/* Directory page */
+
 .directory-section {
     margin-top: 0;
 }
-
-/* Accessibility utility */
 
 .visually-hidden {
     position: absolute;
@@ -178,8 +346,6 @@ main h1 {
     clip-path: inset(50%);
     white-space: nowrap;
 }
-
-/* Grid/List controls */
 
 .view-toggle {
     display: flex;
@@ -191,7 +357,7 @@ main h1 {
 .view-toggle button {
     min-width: 6rem;
     min-height: 44px;
-    border: 1px solid #555;
+    border: 1px solid #555555;
     border-radius: 0.25rem;
     background-color: #dddddd;
     color: var(--text);
@@ -205,8 +371,6 @@ main h1 {
     background-color: var(--primary);
     color: white;
 }
-
-/* Member cards - grid view */
 
 .members-grid {
     display: grid;
@@ -272,8 +436,6 @@ main h1 {
 .address {
     display: none;
 }
-
-/* List view */
 
 .members-list {
     display: grid;
@@ -366,8 +528,8 @@ footer p {
 }
 
 .social img {
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
 }
 
 .footer-info {
@@ -394,18 +556,26 @@ body.dark .navigation a {
     color: #f8fafc;
 }
 
-body.dark .view-toggle button {
+body.dark .view-toggle button,
+body.dark .panel h2 {
     background-color: #374151;
     color: #f8fafc;
 }
 
-body.dark .member-card {
+body.dark .member-card,
+body.dark .panel,
+body.dark .spotlight-card {
     background-color: #243447;
 }
 
+body.dark .navigation a:hover,
+body.dark .navigation a:focus {
+    background-color: #374151;
+}
+
 @media (max-width: 380px) {
-    .brand small {
-        display: none;
+    .brand span {
+        font-size: 1rem;
     }
 
     .member-body {

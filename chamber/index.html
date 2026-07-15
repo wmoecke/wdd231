@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo South Chamber of Commerce</title>
+    <meta name="description"
+        content="Home page for the São Paulo South Chamber of Commerce, featuring local events, weather, calls to action, and member spotlights.">
+    <meta name="author" content="Werner Moecke">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <meta property="og:title" content="São Paulo South Chamber of Commerce">
+    <meta property="og:description" content="Connect with businesses, events, and resources in São Paulo South.">
+    <meta property="og:image" content="https://wmoecke.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://wmoecke.github.io/wdd231/chamber/index.html">
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a class="brand" href="index.html">
+            <img src="images/logo.svg" alt="São Paulo South Chamber of Commerce logo" width="64" height="64">
+            <span>São Paulo South Chamber of Commerce</span>
+        </a>
+
+        <button id="theme-button" class="theme-button" type="button" aria-label="Toggle dark mode"></button>
+
+        <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu"
+            aria-expanded="false" aria-controls="primary-navigation"></button>
+    </header>
+
+    <nav id="primary-navigation" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="home-hero" aria-label="São Paulo South Chamber welcome">
+            <img src="images/hero-sao-paulo.webp" alt="Stylized São Paulo business skyline" width="1400" height="700">
+            <div class="hero-text">
+                <h2>Build your business network in São Paulo South</h2>
+                <p>Join local companies, entrepreneurs, and community leaders working together for stronger regional
+                    growth.</p>
+                <a class="cta-button" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="panel events" aria-labelledby="events-title">
+                <h2 id="events-title">Events</h2>
+                <div class="panel-content">
+                    <ul class="event-list">
+                        <li>
+                            <strong>Business Networking Breakfast</strong><br>
+                            Wednesday, 8:30 AM · Paulista Business Center
+                        </li>
+                        <li>
+                            <strong>Small Business Marketing Workshop</strong><br>
+                            Friday, 2:00 PM · Brooklin Cowork Hub
+                        </li>
+                        <li>
+                            <strong>Local Commerce Roundtable</strong><br>
+                            Saturday, 10:00 AM · Vila Mariana Community Hall
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="panel weather" aria-labelledby="weather-title">
+                <h2 id="weather-title">Weather</h2>
+                <div class="panel-content">
+                    <div class="weather-current">
+                        <p class="temperature" id="current-temp">--</p>
+                        <figure>
+                            <img id="weather-icon" src="images/logo.svg" alt="" width="56" height="56">
+                            <figcaption id="weather-description">Weather data loading</figcaption>
+                        </figure>
+                    </div>
+                    <h3>3-Day Forecast</h3>
+                    <ul id="forecast-list" class="forecast-list"></ul>
+                    <p id="weather-message" class="weather-message"></p>
+                </div>
+            </section>
+
+            <section class="panel join-panel" aria-labelledby="join-title">
+                <h2 id="join-title">Join</h2>
+                <div class="panel-content">
+                    <p>Membership helps your business gain visibility, connect with local leaders, and participate in
+                        chamber-sponsored events.</p>
+                    <a class="cta-button" href="join.html">Learn More</a>
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlights" aria-labelledby="spotlights-title">
+            <h2 id="spotlights-title">Member Spotlights</h2>
+            <div id="spotlights-container" class="spotlight-grid" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h2>São Paulo South Chamber of Commerce</h2>
+            <p>Av. Paulista, 1000</p>
+            <p>São Paulo, SP, Brazil</p>
+            <p>info@spsouthchamber.example</p>
+            <p>+55 11 3000-2310</p>
+        </div>
+
+        <div class="social">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                <img src="images/youtube.svg" alt="YouTube" width="56" height="56">
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener">
+                <img src="images/twitter.svg" alt="Twitter" width="56" height="56">
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="56" height="56">
+            </a>
+        </div>
+
+        <div class="footer-info">
+            <p>WDD 231 Class Project</p>
+            <p>Werner Moecke</p>
+            <p>&copy; <span id="current-year"></span> São Paulo South Chamber of Commerce</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
